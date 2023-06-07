@@ -1,2 +1,0 @@
-# SonarCloudTest
-Test con SonarCloud
