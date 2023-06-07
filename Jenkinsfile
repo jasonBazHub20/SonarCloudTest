@@ -17,8 +17,8 @@ pipeline {
 
         stage('Build') {
             steps {
+               sh 'chmod +x ./gradlew'
                 // Construye tu proyecto Java utilizando Gradle
-                update-index --chmod=+x gradlew
                 sh './gradlew clean build'
             }
         }
