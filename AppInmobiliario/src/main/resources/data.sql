@@ -1,0 +1,7 @@
+INSERT INTO "COORDENADAS" VALUES (1, 99.10, -91.02);
+INSERT INTO "UBICACION" VALUES (1, 'Mexico', 'Guerrero', 'Taxco', 'Taxco de alarcon', 40060, 'Alamos', '12', 'NA', 1);
+INSERT INTO "INMUEBLE" VALUES (1, 'TERRENO', 'DISPONIBLE', 20.0, 8.0, '1000.00', 1);
+
+INSERT INTO "COORDENADAS" VALUES (2, 92.11, -94.23);
+INSERT INTO "UBICACION" VALUES (2, 'Mexico', 'Ciudad de Mexico', 'Tlalpan', 'Tlalpan', 40060, 'Insurgente', '167', 'NA', 2);
+INSERT INTO "INMUEBLE" VALUES (2, 'DEPARTAMENTO', 'VENDIDO', 10.0, 7.0, '5000.00', 2);
