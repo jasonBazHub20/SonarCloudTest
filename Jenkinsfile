@@ -18,6 +18,9 @@ pipeline {
             steps {
                 // Construye tu proyecto Java utilizando Gradle
                 //sh './gradlew clean build'
+		sh 'export MAVEN_HOME=/opt/maven'
+		sh 'export PATH=$PATH:$MAVEN_HOME/bin'
+		sh 'mvn --version'
 		sh 'mvn -B -DskipTests clean package'
             }
         }
