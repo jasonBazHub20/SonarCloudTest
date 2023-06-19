@@ -1,5 +1,9 @@
 pipeline {
     agent any
+   tools {
+        maven '3.8.5'
+    }
+
     environment {
         SONAR_HOST_URL = "https://sonarcloud.io"
         SONAR_TOKEN = credentials('SONAR_TOKEN')
