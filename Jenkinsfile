@@ -34,9 +34,7 @@ pipeline {
                 // Asegúrate de tener instalado el plugin SonarQube Scanner en Jenkins
                 withSonarQubeEnv('SonarCloud') {
                     //sh './gradlew sonar'
-		    sh 'export MAVEN_HOME=/opt/maven'
-		    sh 'export PATH=$PATH:$MAVEN_HOME/bin'
-		    sh 'mvn sonar'
+		    sh './mvnw sonar'
                 }
             }
         }
