@@ -18,7 +18,8 @@ pipeline {
         stage('Build') {
             steps {
                 // Construye tu proyecto Java utilizando Gradle
-                sh './gradlew clean build'
+                //sh './gradlew clean build'
+		sh 'mvn -B -DskipTests clean package'
             }
         }
 
@@ -27,7 +28,8 @@ pipeline {
                 // Realiza el análisis del proyecto con SonarQube Scanner
                 // Asegúrate de tener instalado el plugin SonarQube Scanner en Jenkins
                 withSonarQubeEnv('SonarCloud') {
-                    sh './gradlew sonar'
+                    //sh './gradlew sonar'
+		    sh 'mvn sonar'
                 }
             }
         }
