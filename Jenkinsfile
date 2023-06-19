@@ -18,8 +18,8 @@ pipeline {
             steps {
                 // Construye tu proyecto Java utilizando Gradle
                 //sh './gradlew clean build'
-		//sh 'export MAVEN_HOME=/opt/maven'
-		//sh 'export PATH=$PATH:$MAVEN_HOME/bin'
+		sh 'export MAVEN_HOME=/opt/maven'
+		sh 'export PATH=$PATH:$MAVEN_HOME/bin'
 		sh 'mvn --version'
 		sh 'mvn -B -DskipTests clean package'
             }
@@ -31,7 +31,9 @@ pipeline {
                 // Asegúrate de tener instalado el plugin SonarQube Scanner en Jenkins
                 withSonarQubeEnv('SonarCloud') {
                     //sh './gradlew sonar'
-		    sh 'ssonar'
+		    sh 'export MAVEN_HOME=/opt/maven'
+		    sh 'export PATH=$PATH:$MAVEN_HOME/bin'
+		    sh 'mvn sonar'
                 }
             }
         }
